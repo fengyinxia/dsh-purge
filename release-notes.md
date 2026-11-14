@@ -1,3 +1,19 @@
+# 1.2.0
+
+## 中文
+
+- 版本 **1.2.0**：只适配 DSH **0.2.2-rc.3**（官方桌面 / 官方 `dsh web`），要求 Node.js **>=24.9.0**，不再兼容旧版宿主。
+- 按 0.2.2-rc.3 实际代码重写 #12 / #13 / #14 / #15 / #35 锢点：新的审批句子、升级审批三段校验、`allowed-once` 分支、`async confine()`；锺点不匹配时不会静默打偏。
+- 删掉旧版兼容：persona 旧名折叠、`system-prompt/assemble` 旧 waterfall 签名、`dsh-client-runtime` 依赖。
+- 宿主版本不符时拒绝应用（`dshTarget` 校验收紧为 `0.2.2-rc.3`）。
+
+## English
+
+- **1.2.0** targets DSH **0.2.2-rc.3** only (official desktop / official `dsh web`), Node.js **>=24.9.0**. Legacy host compatibility removed.
+- Re-anchored #12 / #13 / #14 / #15 / #35 to the 0.2.2-rc.3 sources: new approval sentence, three-stage escalation validation, `allowed-once` branch, `async confine()`.
+- Removed legacy compat: old persona name folding, old `system-prompt/assemble` waterfall signature, `dsh-client-runtime` dependency.
+- Apply rejects other host versions (`dshTarget` pinned to `0.2.2-rc.3`).
+
 # 1.1.71
 
 ## 中文

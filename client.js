@@ -3096,17 +3096,11 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 					try { await sessions.refresh(); } catch (error) { lastError = error; }
 				}
 				const known = sessionKnown(sessions, sessionId);
-				if (known || typeof sessions?.open === "function") {
+				if (known) {
 					try {
-						if (workspace && typeof workspace.openSession === "function") {
-							workspace.openSession(sessionId);
-						} else if (typeof sessions?.open === "function") {
-							sessions.open(sessionId);
-						} else {
-							throw new Error("无法打开回退后的会话");
-						}
+						workspace.openSession(sessionId);
 						const selected = workspace?.selection?.getSnapshot?.()?.sessionId;
-						if (!workspace || selected === sessionId) {
+						if (selected === sessionId) {
 							await dropInheritedQueue(sessions, sessionId);
 							window.setTimeout(() => { dropInheritedQueue(sessions, sessionId); }, 250);
 							return;
