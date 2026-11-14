@@ -31,7 +31,7 @@
 
 > **Updates paused.** The author has no steady income for now because of work. Maintenance is on hold: no new releases, issues / PRs are not taken, and new dsh versions are not guaranteed. The repo stays usable; see Sponsor below. When maintenance resumes, this README will say so.
 
-> **Official Web and the official desktop app are both supported.** Official `dsh web` uses profile `web`. The official desktop EXE (DeepSeek Harness **0.2.2-rc.3**) uses profile `desktop`. Install and Apply them separately. This release targets dsh 0.2.2-rc.3 only, without legacy host compatibility. Community Desktop is not maintained.
+> **Official Web and the official desktop app are both supported.** Official `dsh web` uses profile `web`. The official desktop EXE (DeepSeek Harness **0.2.2 series**, verified on 0.2.2-rc.3) uses profile `desktop`. Install and Apply them separately. This release targets dsh 0.2.2.x only, without legacy host compatibility. Community Desktop is not maintained.
 >
 > Adding the plugin to a profile does not patch the host. Click **dsh-purge** beside the session title → **Clean** → **Apply**. A successful Apply restarts; an unfinished Apply does not. After the restart, start a new chat — that is when the inject enters the session.
 >
@@ -160,7 +160,7 @@ WeChat name **「老张的ai科技」**, same handle as the live-room viewer boa
 
 ## Supported hosts
 
-This plugin targets **DSH 0.2.2-rc.3** only (official desktop / official `dsh web`) and requires Node.js **>=24.9.0**. Legacy compatibility has been removed; patch application rejects other host versions.
+This plugin targets **DSH 0.2.2.x** (official desktop / official `dsh web`, verified on 0.2.2-rc.3) and requires Node.js **>=24.9.0**. Legacy compatibility has been removed; patch application rejects other host series.
 
 ---
 

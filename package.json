@@ -90,5 +90,5 @@
   "engines": {
     "node": ">=24.9.0"
   },
-  "dshTarget": "0.2.2-rc.3"
+  "dshTarget": "0.2.2"
 }
